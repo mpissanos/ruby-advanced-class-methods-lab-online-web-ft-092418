@@ -43,18 +43,29 @@ class Song
   
   def self.new_from_filename(filename)
     new_song = self.new
+<<<<<<< HEAD
     new_song.artist_name = filename.split(/[^a-zA-Z\s]|\s-\s/)[0]
     new_song.name = filename.split(/[^a-zA-Z\s]|\s-\s/)[1]
+=======
+    new_song.name = filename.split(/[^a-zA-Z\s*]/)[1]
+    
+>>>>>>> f8c9338aacc69d6a50943bce94b39ad6a7c2e492
     new_song
     
   end
   
+<<<<<<< HEAD
   def self.create_from_filename(filename)
     new_song = self.new
     new_song.artist_name = filename.split(/[^a-zA-Z\s]|\s-\s/)[0]
     new_song.name = filename.split(/[^a-zA-Z\s]|\s-\s/)[1]
     @@all << new_song
     new_song
+=======
+  def create_from_filename
+    new_song = self.new
+    
+>>>>>>> f8c9338aacc69d6a50943bce94b39ad6a7c2e492
   end
   
   def self.destroy_all
